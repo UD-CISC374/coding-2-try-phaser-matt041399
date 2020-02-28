@@ -10,4 +10,8 @@
     "strictPropertyInitialization": false,
     "lib": ["dom", "es5", "esnext", "scripthost"]
   }
+
+  
+
+  
 }
