@@ -176,7 +176,7 @@ export default class MainScene extends Phaser.Scene {
     var explosion = new Explosion(this, player.x, player.y);
     player.disableBody(true, true);
 
-    //this.resetPlayer();
+    this.resetPlayer();
     this.time.addEvent({
         delay: 1000, 
         callback: this.resetPlayer,
@@ -190,7 +190,7 @@ export default class MainScene extends Phaser.Scene {
     var y = this.scale.height + 64;
     this.player.enableBody(true, x, y, true, true);
 
-    /*this.player.alpha = 0.5;
+    this.player.alpha = 0.5;
 
     var tween = this.tweens.add({
       targets: this.player,
@@ -198,16 +198,16 @@ export default class MainScene extends Phaser.Scene {
       ease: 'Power1',
       duration: 1500,
       repeat:0,
-      onComplete: function(){
+      onComplete: ()=>{
   
         this.player.alpha = 1;
       },
       callbackScope: this
-    });*/
+    });
   }
 
   pickPowerUp(player, powerUp){
-    powerUp.disableBody(true, true);
+    //powerUp.disableBody(true, true);
   }
 
   shootBeam(){
